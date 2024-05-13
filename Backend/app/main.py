@@ -34,16 +34,18 @@ def is_draw():
 def if_won():
     # check if some player has just won the game
     global board
-    if board[0] == board[1] == board[2] != None or \
-            board[3] == board[4] == board[5] != None or \
-            board[6] == board[7] == board[8] != None or \
-            board[0] == board[3] == board[6] != None or \
-            board[1] == board[4] == board[7] != None or \
-            board[2] == board[5] == board[8] != None or \
-            board[0] == board[4] == board[8] != None or \
-            board[6] == board[4] == board[2] != None:
+    if board[0] == board[1] == board[2] is not None or \
+       board[3] == board[4] == board[5] is not None or \
+       board[6] == board[7] == board[8] is not None or \
+       board[0] == board[3] == board[6] is not None or \
+       board[1] == board[4] == board[7] is not None or \
+       board[2] == board[5] == board[8] is not None or \
+       board[0] == board[4] == board[8] is not None or \
+       board[6] == board[4] == board[2] is not None:
         board = init_board()
+
         return True
+
     return False
 
 
